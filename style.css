@@ -1,0 +1,205 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+.logo {
+  color: #51a2ff;
+  font-size: 30px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2.5px;
+  background-color: #51a2ff;
+  transition: width 0.4s ease;
+}
+
+.nav-links a:hover {
+  background-color: rgba(81, 162, 255, 0.15); /* light blue background */
+  color: #51a2ff;
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* You can disable the underline if you want */
+  /* Or leave width: 100% if you want underline + box together */
+}
+
+
+.navbar{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+.image-frame{
+  margin-top: 5px;
+  margin-right: 100px;
+  /* margin-left: 100px; */
+  width: 300px; /* Size of the frame */
+  height: 300px;
+  border: 3px solid #51a2ff;
+  border-radius: 53%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  /* margin-bottom: 300px; */
+  transition: all 0.3s ease-in-out;
+}
+.image-frame img {
+  width: 300px; /* Image size inside the frame */
+  height: 300px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Keeps aspect ratio and covers the box */
+
+}
+.image-frame:hover{
+  transform: translateY(-6px); 
+  box-shadow: 0 0 5px #51a2ff, 0 0 20px #7e10e4;
+}
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 150px 100px 50px 100px;
+  gap: 60px; /* spacing between image and text */
+  flex-wrap: wrap; /* allows stacking on small screens */
+}
+
+.name-text {
+  font-size: 42px;
+  color: #51a2ff;
+  animation: slideout 2s ease forwards;
+}
+@keyframes slideout{
+  from{
+    transform: translateX(0px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(60px);
+    opacity: 1;
+  }
+}
+.home-text h3{
+  margin-top: 10px;
+}
+.home-text {
+  max-width: 600px;
+  margin-top: 200px; 
+}
+.home-text p {
+  margin-top: 15px;
+  line-height: 1.6;
+  text-align: justify;
+}
+.home-text {
+  animation: slideIn 2s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(70px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.view-button{
+  background-color: #2079df;
+  color: white;
+  border: none;
+  margin-top: 15px;
+  height: 40px;
+  width: 130px;
+  border-radius: 19px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.view-button:hover {
+  background-color: #3688da;
+  transform: translateY(-5px); 
+}
+.view-button:active{
+  background-color: #43698f;
+}
+
+.contact-button{
+  background-color:transparent;
+  color:  #2079df;
+  border: 2px solid  #2079df;
+  margin-top: 15px;
+  height: 40px;
+  width: 130px;
+  border-radius: 19px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.contact-button:hover {
+  background-color: #2079df;
+  color: white;
+  transform: translateY(-5px); 
+}
+.contact-button:active{
+  background-color: #43698f;
+}
+.social-icons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* or left: 20px; */
+  display: flex;
+  gap: 15px;
+  z-index: 999;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  /* filter: grayscale(100%) brightness(1.5); */
+}
+
+.social-icons img:hover {
+  transform: scale(1.2);
+  filter: grayscale(0%);
+}
