@@ -282,29 +282,35 @@ html {
 
 /*small Desktop/Large Tablet*/
 @media screen and (max-width: 900px) {
-  .home-section {
-      gap: 25px;
-  }
-  
-  .image-frame {
-      width: 220px;
-      height: 220px;
-      margin-right: 20px;
-      margin-left: 10px;
-  }
-  
-  .image-frame img {
-      width: 220px;
-      height: 220px;
-  }
-  
-  .home-text {
-      max-width: 450px;
-  }
-  
-  .name-text {
-      font-size: 36px;
-  }
+.home-section {
+    gap: 25px;
+}
+
+.image-frame {
+    width: 220px;
+    height: 220px;
+    margin-right: 20px;
+    margin-left: 0px;
+    margin-top: -100px;
+
+}
+
+.image-frame img {
+    width: 220px;
+    height: 220px;
+    
+
+}
+
+.home-text {
+    max-width: 450px;
+    margin-left: 30px;
+    margin-top: -20px;
+}
+
+.name-text {
+    font-size: 36px;
+}
 }
 
 /*tablet*/
@@ -798,7 +804,7 @@ html {
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
