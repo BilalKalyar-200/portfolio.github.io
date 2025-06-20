@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enhanced Skills Section</title>
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background: #0a0a0a;
+color: white;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+overflow-x: hidden;
+}
+
+.skills-section2 {
+padding: 100px 50px;
+min-height: 100vh;
+position: relative;
+background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0d0d0d 100%);
+
+}
+
+.skills-container2 {
+max-width: 1300px;
+margin: 0 auto;
+position: relative;
+z-index: 2;
+}
+
+.section-title2 {
+font-size: 52px;
+color: #51a2ff;
+margin-bottom: 20px;
+text-align: center;
+position: relative;
+text-shadow: 0 0 30px rgba(81, 162, 255, 0.4);
+font-weight: 700;
+}
+
+.section-title2::after {
+content: '';
+position: absolute;
+bottom: -20px;
+left: 50%;
+transform: translateX(-50%);
+width: 120px;
+height: 4px;
+background: linear-gradient(90deg, transparent, #51a2ff, #7e10e4, transparent);
+border-radius: 2px;
+animation: pulse-glow2 2s ease-in-out infinite alternate;
+}
+
+.section-subtitle2 {
+text-align: center;
+font-size: 18px;
+color: #888;
+margin-bottom: 70px;
+font-weight: 300;
+}
+
+.skills-grid2 {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+gap: 35px;
+margin-top: 50px;
+}
+
+.skill-card2 {
+background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+border: 2px solid rgba(81, 162, 255, 0.2);
+border-radius: 20px;
+padding: 30px;
+position: relative;
+backdrop-filter: blur(15px);
+transition: all 0.4s ease;
+opacity: 0;
+transform: translateY(40px);
+animation: slideInUp2 0.8s ease forwards;
+overflow: hidden;
+}
+
+.skill-card2::before {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(81, 162, 255, 0.1), transparent);
+transition: left 0.6s ease;
+}
+
+.skill-card2:hover::before {
+left: 100%;
+}
+
+.skill-card2:hover {
+transform: translateY(-8px);
+border-color: rgba(81, 162, 255, 0.5);
+box-shadow: 
+    0 20px 40px rgba(81, 162, 255, 0.15),
+    0 0 30px rgba(81, 162, 255, 0.1);
+}
+
+.skill-card2:nth-child(1) { animation-delay: 0.1s; }
+.skill-card2:nth-child(2) { animation-delay: 0.2s; }
+.skill-card2:nth-child(3) { animation-delay: 0.3s; }
+.skill-card2:nth-child(4) { animation-delay: 0.4s; }
+.skill-card2:nth-child(5) { animation-delay: 0.5s; }
+.skill-card2:nth-child(6) { animation-delay: 0.6s; }
+.skill-card2:nth-child(7) { animation-delay: 0.7s; }
+.skill-card2:nth-child(8) { animation-delay: 0.8s; }
+
+.skill-header2 {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+}
+
+.skill-name2 {
+font-size: 22px;
+font-weight: 700;
+color: #51a2ff;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+position: relative;
+}
+
+.skill-name2::after {
+content: '';
+position: absolute;
+bottom: -3px;
+left: 0;
+width: 30px;
+height: 2px;
+background: #51a2ff;
+border-radius: 1px;
+}
+
+.skill-percentage2 {
+font-size: 16px;
+color: #fff;
+font-weight: 700;
+padding: 8px 16px;
+background: linear-gradient(135deg, #51a2ff, #7e10e4);
+border-radius: 25px;
+box-shadow: 0 4px 15px rgba(81, 162, 255, 0.3);
+text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.skill-bar2 {
+width: 100%;
+height: 10px;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 15px;
+overflow: hidden;
+position: relative;
+box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.4);
+margin-bottom: 20px;
+}
+
+.skill-progress2 {
+height: 100%;
+background: linear-gradient(90deg, #51a2ff, #7e10e4, #51a2ff);
+background-size: 200% 100%;
+border-radius: 15px;
+width: 0%;
+transition: width 2.5s cubic-bezier(0.4, 0, 0.2, 1);
+position: relative;
+box-shadow: 0 0 20px rgba(81, 162, 255, 0.6);
+animation: gradient-flow2 3s ease-in-out infinite;
+}
+
+.skill-progress2::after {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+animation: shimmer2 2.5s infinite;
+}
+
+.skill-description2 {
+color: #ccc;
+font-size: 14px;
+line-height: 1.6;
+font-weight: 400;
+padding-left: 15px;
+border-left: 3px solid rgba(81, 162, 255, 0.3);
+background: rgba(81, 162, 255, 0.03);
+padding: 15px;
+border-radius: 8px;
+margin-top: 15px;
+}
+
+.skill-projects2 {
+color: #51a2ff;
+font-weight: 600;
+font-size: 13px;
+margin-bottom: 8px;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+
+/* Floating background elements */
+.floating-elements2 {
+position: absolute;
+width: 100%;
+height: 100%;
+overflow: hidden;
+pointer-events: none;
+z-index: 1;
+}
+
+.floating-circle2 {
+position: absolute;
+border: 2px solid rgba(81, 162, 255, 0.1);
+border-radius: 50%;
+animation: float-circle2 25s linear infinite;
+}
+
+.floating-circle2:nth-child(1) {
+width: 120px;
+height: 120px;
+top: 15%;
+left: 8%;
+animation-duration: 30s;
+}
+
+.floating-circle2:nth-child(2) {
+width: 180px;
+height: 180px;
+top: 50%;
+right: 10%;
+animation-duration: 35s;
+animation-direction: reverse;
+}
+
+.floating-circle2:nth-child(3) {
+width: 90px;
+height: 90px;
+bottom: 25%;
+left: 15%;
+animation-duration: 40s;
+}
+
+.floating-dot2 {
+position: absolute;
+width: 4px;
+height: 4px;
+background: rgba(81, 162, 255, 0.3);
+border-radius: 50%;
+animation: float-dot2 15s ease-in-out infinite;
+}
+
+.floating-dot2:nth-child(4) {
+top: 30%;
+left: 70%;
+animation-delay: -2s;
+}
+
+.floating-dot2:nth-child(5) {
+top: 70%;
+left: 25%;
+animation-delay: -5s;
+}
+
+@keyframes slideInUp2 {
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+@keyframes shimmer2 {
+0% { transform: translateX(-100%); }
+100% { transform: translateX(100%); }
+}
+
+@keyframes gradient-flow2 {
+0%, 100% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+}
+
+@keyframes pulse-glow2 {
+0% { box-shadow: 0 0 5px rgba(81, 162, 255, 0.4); }
+100% { box-shadow: 0 0 20px rgba(81, 162, 255, 0.8); }
+}
+
+@keyframes float-circle2 {
+0%, 100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.3;
+}
+50% {
+    transform: translateY(-40px) rotate(180deg);
+    opacity: 0.1;
+}
+}
+
+@keyframes float-dot2 {
+0%, 100% {
+    transform: translateY(0);
+    opacity: 0.3;
+}
+50% {
+    transform: translateY(-20px);
+    opacity: 0.8;
+}
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+.skills-section2 {
+    padding: 70px 20px;
+}
+
+.section-title2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.section-subtitle2 {
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+.skills-grid2 {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.skill-card2 {
+    padding: 25px 20px;
+    border-radius: 15px;
+}
+
+.skill-name2 {
+    font-size: 18px;
+}
+
+.skill-percentage2 {
+    font-size: 14px;
+    padding: 6px 12px;
+}
+
+.skill-bar2 {
+    height: 8px;
+    margin-bottom: 15px;
+}
+
+.skill-description2 {
+    font-size: 13px;
+    padding: 12px;
+}
+}
+
+@media screen and (max-width: 480px) {
+.skills-section2 {
+    padding: 60px 15px;
+}
+
+.section-title2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle2 {
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.skills-grid2 {
+    gap: 20px;
+}
+
+.skill-card2 {
+    padding: 20px 15px;
+}
+
+.skill-header2 {
+    margin-bottom: 15px;
+}
+
+.skill-name2 {
+    font-size: 16px;
+}
+
+.skill-percentage2 {
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+.skill-bar2 {
+    height: 6px;
+}
+
+.skill-description2 {
+    font-size: 12px;
+    padding: 10px;
+}
+}
+.skill-progress2.cplusplus {
+  width: 80%;
+}
+
+.skill-progress2.assembly {
+  width: 50%;
+}
+
+.skill-progress2.html {
+  width: 80%;
+}
+
+.skill-progress2.css {
+  width: 70%;
+}
+
+.skill-progress2.javascript {
+  width: 60%;
+}
+
+.skill-progress2.python {
+  width: 50%;
+}
+
+.skill-progress2.sql {
+  width: 70%;
+}
+
+.skill-progress2.plsql {
+  width: 50%;
+}
+</style>
+</head>
+<body>
+    <section class="skills-section2">
+      <div class="floating-elements2">
+        <div class="floating-circle2"></div>
+        <div class="floating-circle2"></div>
+        <div class="floating-circle2"></div>
+        <div class="floating-dot2"></div>
+        <div class="floating-dot2"></div>
+      </div>
+        
+    <div class="skills-container2">
+        <h2 class="section-title2">Technical Expertise</h2>
+        <p class="section-subtitle2">Showcasing my programming skills through real-world projects and applications</p>
+        <div class="skills-grid2">
+            <div class="skill-card2">
+                <div class="skill-header2">
+                    <span class="skill-name2">C++</span>
+                    <span class="skill-percentage2">80%</span>
+                </div>
+                <div class="skill-bar2">
+                <div class="skill-progress2 cplusplus"></div>
+                </div>
+                <div class="skill-description2">
+                    <div class="skill-projects2">Key Projects:</div>
+                    Developed applications like Mini-Instagram with photo sharing capabilities, Candy Crush game with advanced algorithms, and Phone Book management system showcasing object-oriented programming, data structures, and memory management expertise.
+                </div>
+            </div>
+
+            <div class="skill-card2">
+                <div class="skill-header2">
+                    <span class="skill-name2">Assembly</span>
+                    <span class="skill-percentage2">50%</span>
+                </div>
+                <div class="skill-bar2">
+                    <div class="skill-progress2 assembly"></div>
+                </div>
+                <div class="skill-description2">
+                    <div class="skill-projects2">Key Projects:</div>
+                    Built a classic Ping Pong game demonstrating low-level programming concepts, memory management, and system-level optimization. Focused on understanding computer architecture and hardware-software interaction fundamentals.
+                </div>
+            </div>
+
+            <div class="skill-card2">
+                <div class="skill-header2">
+                    <span class="skill-name2">HTML</span>
+                    <span class="skill-percentage2">80%</span>
+                </div>
+                <div class="skill-bar2">
+                    <div class="skill-progress2 html"></div>
+                </div>
+                <div class="skill-description2">
+                    <div class="skill-projects2">Key Projects:</div>
+                    Created responsive portfolio websites, interactive landing pages, and semantic web structures. Proficient in HTML5 features, accessibility standards, and modern web markup practices for optimal user experience and SEO.
+                </div>
+            </div>
+
+            <div class="skill-card2">
+                <div class="skill-header2">
+                    <span class="skill-name2">CSS</span>
+                    <span class="skill-percentage2">70%</span>
+                </div>
+                <div class="skill-bar2">
+                    <div class="skill-progress2 html"></div>
+                </div>
+                <div class="skill-description2">
+                    <div class="skill-projects2">Key Projects:</div>
+                    Designed stunning visual interfaces with advanced animations, responsive layouts using Flexbox and Grid, and custom themes. Specialized in CSS3 transitions, transforms, and creating engaging user interfaces with modern design principles.
+                </div>
+            </div>
+
+            <div class="skill-card2">
+                <div class="skill-header2">
+                    <span class="skill-name2">JavaScript</span>
+                    <span class="skill-percentage2">60%</span>
+                </div>
+                <div class="skill-bar2">
+                    <div class="skill-progress2 css"></div>
+                </div>
+                <div class="skill-description2">
+                    <div class="skill-projects2">Key Projects:</div>
+                    Developed interactive web applications, dynamic form validations, and API integrations. Experience with DOM manipulation, event handling, async programming, and modern ES6+ features for creating engaging user experiences.
+                </div>
+            </div>
+
+            <div class="skill-card2">
+                <div class="skill-header2">
+                    <span class="skill-name2">Python</span>
+                    <span class="skill-percentage2">50%</span>
+                </div>
+                <div class="skill-bar2">
+                    <div class="skill-progress2 python"></div>
+                </div>
+                <div class="skill-description2">
+                    <div class="skill-projects2">Key Projects:</div>
+                    Built automation scripts, data analysis tools, and backend applications. Worked with libraries like Pandas for data manipulation, web scraping tools, and basic machine learning implementations showcasing Python's versatility.
+                </div>
+            </div>
+
+            <div class="skill-card2">
+                <div class="skill-header2">
+                    <span class="skill-name2">SQL</span>
+                    <span class="skill-percentage2">70%</span>
+                </div>
+                <div class="skill-bar2">
+                    <div class="skill-progress2 sql"></div>
+                </div>
+                <div class="skill-description2">
+                    <div class="skill-projects2">Key Projects:</div>
+                    Designed and optimized database schemas for various applications, created complex queries for data analysis, and implemented efficient database solutions. Strong foundation in relational database design and query optimization.
+                </div>
+            </div>
+
+            <div class="skill-card2">
+                <div class="skill-header2">
+                    <span class="skill-name2">PL/SQL</span>
+                    <span class="skill-percentage2">50%</span>
+                </div>
+                <div class="skill-bar2">
+                    <div class="skill-progress2 plsql"></div>
+                </div>
+                <div class="skill-description2">
+                    <div class="skill-projects2">Key Projects:</div>
+                    Developed stored procedures, triggers, and database functions for enterprise applications. Experience with Oracle database programming, error handling, and creating efficient database-driven business logic solutions.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- 
+<script>
+
+    window.addEventListener('load', function() {
+        setTimeout(() => {
+            const progressBars2 = document.querySelectorAll('.skill-progress2');
+            progressBars2.forEach((bar, index) => {
+                const width = bar.dataset.width;
+                setTimeout(() => {
+                    bar.style.width = width + '%';
+                }, 100 * index);
+            });
+        }, 1200);
+    });
+
+    const observerOptions2 = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer2 = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const progressBar2 = entry.target.querySelector('.skill-progress2');
+                const width = progressBar2.dataset.width;
+                setTimeout(() => {
+                    progressBar2.style.width = width + '%';
+                }, 300);
+            }
+        });
+    }, observerOptions2);
+
+    document.querySelectorAll('.skill-card2').forEach(card => {
+        observer2.observe(card);
+    });
+
+    document.querySelectorAll('.skill-card2').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-12px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+</script> -->
+</body>
+</html>
