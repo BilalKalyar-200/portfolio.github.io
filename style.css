@@ -776,7 +776,7 @@ html {
         opacity: 0.1;
     }
 }
-
+/* 
 @media (max-width: 768px) {
     .about-section {
         padding: 40px 30px;
@@ -799,7 +799,7 @@ html {
     .skill-category {
         padding: 25px 20px;
     }
-}
+} */
 
 @media (max-width: 480px) {
     .about-section {
@@ -826,7 +826,7 @@ html {
 }
 
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .nav-links {
     display: none;
     flex-direction: column;
@@ -854,7 +854,7 @@ html {
     justify-content: space-between;
     padding: 20px;
   }
-}
+} */
 
 .skills-section {
 padding: 120px 50px 50px 50px;
@@ -983,6 +983,7 @@ border-radius: 15px;
 font-size: 12px;
 font-weight: bold;
 }
+/* a mobile with little big screen */
 @media screen and (max-width: 992px) {
   .nav-links {
     display: none;
@@ -1001,18 +1002,18 @@ font-weight: bold;
     display: flex;
   }
 
-  /* .hamburger {
+  .hamburger {
     display: block;
-  } */
+  }
 
-  /* .navbar {
+  .navbar {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-  } */
+  }
 }
-
+/* 
 @media screen and (max-width: 820px) {
   .skills-section {
     padding: 60px 10px 20px 10px;
@@ -1055,10 +1056,10 @@ font-weight: bold;
     font-size: 10px;
     padding: 2px 8px;
   }
-}
-
+} */
+/* 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
 .navbar {
     padding: 15px 20px;
 }
@@ -1107,7 +1108,7 @@ font-weight: bold;
 .skill-title {
     font-size: 20px;
 }
-}
+} */
 
 @media screen and (max-width: 480px) {
 .skills-section {
