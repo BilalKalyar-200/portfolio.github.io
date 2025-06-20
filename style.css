@@ -1255,7 +1255,7 @@ margin-bottom: 20px;
 position: relative;
 }
 
-.section-title::after {
+.section-title::after{
 content: "";
 position: absolute;
 bottom: -10px;
