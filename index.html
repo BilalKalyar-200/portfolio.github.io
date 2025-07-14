@@ -1,367 +1,377 @@
-  <!DOCTYPE html>
-  <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bilal's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
     <!-- Navigation -->
-  <nav class="navbar">
-    <h1 class="logo">Bilal Mohsin</h1>
-     <div class="hamburger" onclick="toggleMenu()">
-        ☰
-     </div>
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <!-- ===================================this is home section=================================== -->
-  <section id="home" class="home-section">
-    <div class="image-frame">
-      <img src="img.png" alt="'BILAL">
-    </div>
-    <div class="home-text">
-      <div>
-        <h2>Hello, I am</h2>
-        <h1 class="name-text">Bilal Mohsin</h1>
-        <h3>Computer Science Student</h3>
-        <p>Enthusiastic and driven Computer Science student
-          with a solid foundation in both technical and creative
-          skills. Passionate about leveraging technology to solve
-            problems and create innovative solutions. Adept at working in
-            collaborative environments and continuously eager to learn and grow.
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#home">Bilal Mohsin</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <div class="hero-image mx-auto">
+              <img src="img.png" alt="Bilal Mohsin" class="img-fluid" />
+            </div>
+          </div>
+          <div class="col-lg-8 col-md-6">
+            <div class="hero-text">
+              <h2 class="hero-subtitle">Hello, I am</h2>
+              <h1 class="hero-title">Bilal Mohsin</h1>
+              <h3 class="mb-3">Computer Science Student</h3>
+              <p class="hero-description">
+                Enthusiastic and driven Computer Science student with a solid
+                foundation in both technical and creative skills. Passionate
+                about leveraging technology to solve problems and create
+                innovative solutions. Adept at working in collaborative
+                environments and continuously eager to learn and grow.
+              </p>
+              <div class="d-flex flex-wrap gap-3 mb-3">
+                <a href="#projects">
+                  <button class="btn btn-primary-custom">View My Work</button>
+                </a>
+                <button class="btn btn-outline-custom">Contact Me</button>
+              </div>
+              <div class="social-icons d-flex d-md-none">
+                <a
+                  href="https://www.linkedin.com/in/bilal-mohsin-830350320/"
+                  target="_blank"
+                  class="social-icon"
+                >
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <a
+                  href="https://github.com/BilalKalyar-200"
+                  target="_blank"
+                  class="social-icon"
+                >
+                  <i class="bi bi-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <div class="about-card">
+              <div class="text-center mb-4">
+                <p class="lead">
+                  I'm
+                  <strong style="color: var(--primary-color)"
+                    >Bilal Mohsin</strong
+                  >, a passionate Computer Science student dedicated to building
+                  meaningful and impactful digital experiences. I thrive in
+                  collaborative environments and continuously seek opportunities
+                  to learn, solve real-world problems, and bring creative ideas
+                  to life through technology.
+                </p>
+              </div>
+
+              <h3 class="text-center mb-4" style="color: var(--primary-color)">
+                My Skills & Expertise
+              </h3>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="skill-category">
+                    <h4>Languages</h4>
+                    <div class="skill-item">C++</div>
+                    <div class="skill-item">Python</div>
+                    <div class="skill-item">HTML/CSS</div>
+                    <div class="skill-item">JavaScript</div>
+                    <div class="skill-item">Assembly</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="skill-category">
+                    <h4>Tools & Frameworks</h4>
+                    <div class="skill-item">VS Code</div>
+                    <div class="skill-item">SQL</div>
+                    <div class="skill-item">Bootstrap</div>
+                    <div class="skill-item">Git</div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="skill-category">
+                    <h4>Soft Skills</h4>
+                    <div class="skill-item">Communication</div>
+                    <div class="skill-item">Teamwork</div>
+                    <div class="skill-item">Problem-solving</div>
+                    <div class="skill-item">Leadership</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        <h2 class="section-title">Tools in Action</h2>
+        <p class="text-center mb-5" style="color: #ccc">
+          Showcasing my programming skills through real-world projects and
+          applications
         </p>
-        <button class="view-button">View My Work</button>
-        <button class="contact-button">Contact me</button>
-      </div>
-          <div class="social-icons">
-      <a href="https://www.linkedin.com/in/bilal-mohsin-830350320/" target="_blank">
-        <img src="linkedin.png" alt="LinkedIn">
-      </a>
-      <a href="https://github.com/BilalKalyar-200" target="_blank">
-        <img src="github.png" alt="GitHub">
-      </a>
-    </div>
-    </div>
-    
-  </section>
-  <!-- ===================================this is about section=================================== -->
-    <div id="about" class="anchor-fix"></div>
-   <section class="about-section">
-        <div class="floating-elements">
-            <div class="floating-circle"></div>
-            <div class="floating-circle"></div>
-            <div class="floating-circle"></div>
-        </div>
-        
-        <div class="header-section">
-            <h1>About Me</h1>
-        </div>
-        
-        <div class="intro-text">
-            I'm <strong>Bilal Mohsin</strong>, a passionate Computer Science student dedicated to building meaningful and impactful digital experiences. I thrive in collaborative environments and continuously seek opportunities to learn, solve real-world problems, and bring creative ideas to life through technology.
-        </div>
-        
-        <div class="skills-container">
-            <h2 class="skills-title">My Skills & Expertise</h2>
-            <div class="skills">
-                <div class="skill-category">
-                    <h2>Languages</h2>
-                    <ul>
-                        <li>C++</li>
-                        <li>Python</li>
-                        <li>HTML/CSS</li>
-                        <li>JavaScript</li>
-                        <li>Assembly</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h2>Tools & Frameworks</h2>
-                    <ul>
-                        <li>VS Code</li>
-                        <li>SQL</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h2>Soft Skills</h2>
-                    <ul>
-                        <li>Communication</li>
-                        <li>Teamwork</li>
-                        <li>Problem-solving</li>
-                    </ul>
-                </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="skill-card">
+              <div class="skill-header">
+                <span class="skill-name">C++</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" style="width: 80%"></div>
+              </div>
+              <div class="skill-description">
+                <strong style="color: var(--primary-color)"
+                  >Key Projects:</strong
+                >
+                Developed applications like Mini-Instagram with photo sharing
+                capabilities, Candy Crush game with advanced algorithms, and
+                Phone Book management system showcasing object-oriented
+                programming, data structures, and memory management expertise.
+              </div>
             </div>
-        </div>
-    </section>
-    <!--===================================this is skills section===================================-->
-    <div id="skills"></div>
-     <section class="skills-section2">
-      <div class="floating-elements2">
-        <div class="floating-circle2"></div>
-        <div class="floating-circle2"></div>
-        <div class="floating-circle2"></div>
-        <div class="floating-dot2"></div>
-        <div class="floating-dot2"></div>
-      </div>
-        
-    <div class="skills-container2">
-        <h2 class="section-title2">Tools in Action</h2>
-        <p class="section-subtitle2">Showcasing my programming skills through real-world projects and applications</p>
-        <div class="skills-grid2">
-            <div class="skill-card2">
-                <div class="skill-header2">
-                    <span class="skill-name2">C++</span>
-                    <span class="skill-percentage2">80%</span>
-                </div>
-                <div class="skill-bar2">
-                <div class="skill-progress2 cplusplus"></div>
-                </div>
-                <div class="skill-description2">
-                    <div class="skill-projects2">Key Projects:</div>
-                    Developed applications like Mini-Instagram with photo sharing capabilities, Candy Crush game with advanced algorithms, and Phone Book management system showcasing object-oriented programming, data structures, and memory management expertise.
-                </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="skill-card">
+              <div class="skill-header">
+                <span class="skill-name">Assembly</span>
+                <span class="skill-percentage">50%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" style="width: 50%"></div>
+              </div>
+              <div class="skill-description">
+                <strong style="color: var(--primary-color)"
+                  >Key Projects:</strong
+                >
+                Built a classic Ping Pong game demonstrating low-level
+                programming concepts, memory management, and system-level
+                optimization. Focused on understanding computer architecture and
+                hardware-software interaction fundamentals.
+              </div>
             </div>
-
-            <div class="skill-card2">
-                <div class="skill-header2">
-                    <span class="skill-name2">Assembly</span>
-                    <span class="skill-percentage2">50%</span>
-                </div>
-                <div class="skill-bar2">
-                    <div class="skill-progress2 assembly"></div>
-                </div>
-                <div class="skill-description2">
-                    <div class="skill-projects2">Key Projects:</div>
-                    Built a classic Ping Pong game demonstrating low-level programming concepts, memory management, and system-level optimization. Focused on understanding computer architecture and hardware-software interaction fundamentals.
-                </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="skill-card">
+              <div class="skill-header">
+                <span class="skill-name">HTML/CSS</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" style="width: 80%"></div>
+              </div>
+              <div class="skill-description">
+                <strong style="color: var(--primary-color)"
+                  >Key Projects:</strong
+                >
+                Created responsive portfolio websites, interactive landing
+                pages, and semantic web structures. Proficient in HTML5
+                features, accessibility standards, and modern web markup
+                practices for optimal user experience and SEO.
+              </div>
             </div>
-
-            <div class="skill-card2">
-                <div class="skill-header2">
-                    <span class="skill-name2">HTML</span>
-                    <span class="skill-percentage2">80%</span>
-                </div>
-                <div class="skill-bar2">
-                    <div class="skill-progress2 html"></div>
-                </div>
-                <div class="skill-description2">
-                    <div class="skill-projects2">Key Projects:</div>
-                    Created responsive portfolio websites, interactive landing pages, and semantic web structures. Proficient in HTML5 features, accessibility standards, and modern web markup practices for optimal user experience and SEO.
-                </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="skill-card">
+              <div class="skill-header">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-percentage">60%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" style="width: 60%"></div>
+              </div>
+              <div class="skill-description">
+                <strong style="color: var(--primary-color)"
+                  >Key Projects:</strong
+                >
+                Developed interactive web applications, dynamic form
+                validations, and API integrations. Experience with DOM
+                manipulation, event handling, async programming, and modern ES6+
+                features for creating engaging user experiences.
+              </div>
             </div>
-
-            <div class="skill-card2">
-                <div class="skill-header2">
-                    <span class="skill-name2">CSS</span>
-                    <span class="skill-percentage2">70%</span>
-                </div>
-                <div class="skill-bar2">
-                    <div class="skill-progress2 html"></div>
-                </div>
-                <div class="skill-description2">
-                    <div class="skill-projects2">Key Projects:</div>
-                    Designed stunning visual interfaces with advanced animations, responsive layouts using Flexbox and Grid, and custom themes. Specialized in CSS3 transitions, transforms, and creating engaging user interfaces with modern design principles.
-                </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="skill-card">
+              <div class="skill-header">
+                <span class="skill-name">Python</span>
+                <span class="skill-percentage">50%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" style="width: 50%"></div>
+              </div>
+              <div class="skill-description">
+                <strong style="color: var(--primary-color)"
+                  >Key Projects:</strong
+                >
+                Built automation scripts, data analysis tools, and backend
+                applications. Worked with libraries like Pandas for data
+                manipulation, web scraping tools, and basic machine learning
+                implementations showcasing Python's versatility.
+              </div>
             </div>
-
-            <div class="skill-card2">
-                <div class="skill-header2">
-                    <span class="skill-name2">JavaScript</span>
-                    <span class="skill-percentage2">60%</span>
-                </div>
-                <div class="skill-bar2">
-                    <div class="skill-progress2 css"></div>
-                </div>
-                <div class="skill-description2">
-                    <div class="skill-projects2">Key Projects:</div>
-                    Developed interactive web applications, dynamic form validations, and API integrations. Experience with DOM manipulation, event handling, async programming, and modern ES6+ features for creating engaging user experiences.
-                </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="skill-card">
+              <div class="skill-header">
+                <span class="skill-name">SQL</span>
+                <span class="skill-percentage">70%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" style="width: 70%"></div>
+              </div>
+              <div class="skill-description">
+                <strong style="color: var(--primary-color)"
+                  >Key Projects:</strong
+                >
+                Designed and optimized database schemas for various
+                applications, created complex queries for data analysis, and
+                implemented efficient database solutions. Strong foundation in
+                relational database design and query optimization.
+              </div>
             </div>
-
-            <div class="skill-card2">
-                <div class="skill-header2">
-                    <span class="skill-name2">Python</span>
-                    <span class="skill-percentage2">50%</span>
-                </div>
-                <div class="skill-bar2">
-                    <div class="skill-progress2 python"></div>
-                </div>
-                <div class="skill-description2">
-                    <div class="skill-projects2">Key Projects:</div>
-                    Built automation scripts, data analysis tools, and backend applications. Worked with libraries like Pandas for data manipulation, web scraping tools, and basic machine learning implementations showcasing Python's versatility.
-                </div>
-            </div>
-
-            <div class="skill-card2">
-                <div class="skill-header2">
-                    <span class="skill-name2">SQL</span>
-                    <span class="skill-percentage2">70%</span>
-                </div>
-                <div class="skill-bar2">
-                    <div class="skill-progress2 sql"></div>
-                </div>
-                <div class="skill-description2">
-                    <div class="skill-projects2">Key Projects:</div>
-                    Designed and optimized database schemas for various applications, created complex queries for data analysis, and implemented efficient database solutions. Strong foundation in relational database design and query optimization.
-                </div>
-            </div>
-
-            <div class="skill-card2">
-                <div class="skill-header2">
-                    <span class="skill-name2">PL/SQL</span>
-                    <span class="skill-percentage2">50%</span>
-                </div>
-                <div class="skill-bar2">
-                    <div class="skill-progress2 plsql"></div>
-                </div>
-                <div class="skill-description2">
-                    <div class="skill-projects2">Key Projects:</div>
-                    Developed stored procedures, triggers, and database functions for enterprise applications. Experience with Oracle database programming, error handling, and creating efficient database-driven business logic solutions.
-                </div>
-            </div>
+          </div>
         </div>
       </div>
     </section>
-    <!-- ===================================this is project section=================================== -->
-    <section id="projects" class="project-section">
-      <h2 class="section-title">Built with Code</h2>
-      <p class="section-subtitle">
-          Showcasing my expertise through hands-on projects and real-world applications
-      </p>
-      
-      <div class="project-grid">
-        <div class="project-card">
-            <div class="project-icon">🎮</div>
-            <h3 class="project-title">Game Store</h3>
-            <p class="project-tech">Web Development</p>
-            <p class="project-description">
-               Developed a game store platform with user auth, catalog management,
-               cart system, secure payments, reviews, ratings, 
-               and admin dashboard.
-            </p>
-            <div class="tech-tags">
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+      <div class="container">
+        <h2 class="section-title">Built with Code</h2>
+        <p class="text-center mb-5" style="color: #ccc">
+          Showcasing my expertise through hands-on projects and real-world
+          applications
+        </p>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-icon">🎮</div>
+              <h3 class="project-title">Game Store</h3>
+              <p class="project-tech">Web Development</p>
+              <p class="project-description">
+                Developed a game store platform with user auth, catalog
+                management, cart system, secure payments, reviews, ratings, and
+                admin dashboard.
+              </p>
+              <div class="tech-tags">
                 <span class="tech-tag">HTML</span>
                 <span class="tech-tag">CSS</span>
                 <span class="tech-tag">JavaScript</span>
                 <span class="tech-tag">SQL</span>
+              </div>
             </div>
-        </div>
-          <div class="project-card">
-            <div class="project-icon">🏓</div>
-            <h3 class="project-title">Ping Pong Game</h3>
-            <p class="project-tech">Low-Level Programming</p>
-            <p class="project-description">
-                Built a classic Ping Pong game in Assembly, showcasing 
-                low-level programming, memory control, 
-                and hardware interaction.
-            </p>
-            <div class="tech-tags">
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-icon">🏓</div>
+              <h3 class="project-title">Ping Pong Game</h3>
+              <p class="project-tech">Low-Level Programming</p>
+              <p class="project-description">
+                Built a classic Ping Pong game in Assembly, showcasing low-level
+                programming, memory control, and hardware interaction.
+              </p>
+              <div class="tech-tags">
                 <span class="tech-tag">Assembly</span>
                 <span class="tech-tag">x86</span>
                 <span class="tech-tag">Memory Management</span>
+              </div>
             </div>
           </div>
-          <div class="project-card">
-            <div class="project-icon">📸</div>
-            <h3 class="project-title">Mini Instagram App</h3>
-            <p class="project-tech">Data Structures & Algorithms</p>
-            <p class="project-description">
-               Developed a mini Instagram in C++ with login, follow system, messaging, posts, 
-               and secure password reset using BST, 
-               stacks, and linked lists.
-            </p>
-            <div class="tech-tags">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-icon">📸</div>
+              <h3 class="project-title">Mini Instagram App</h3>
+              <p class="project-tech">Data Structures & Algorithms</p>
+              <p class="project-description">
+                Developed a mini Instagram in C++ with login, follow system,
+                messaging, posts, and secure password reset using BST, stacks,
+                and linked lists.
+              </p>
+              <div class="tech-tags">
                 <span class="tech-tag">C++</span>
                 <span class="tech-tag">Data Structures</span>
                 <span class="tech-tag">Algorithms</span>
                 <span class="tech-tag">STL</span>
+              </div>
             </div>
           </div>
-          <div class="project-card">
-            <div class="project-icon">📊</div>
-            <h3 class="project-title">Global Economy Indicator</h3>
-            <p class="project-tech">Data Analysis & Visualization</p>
-            <p class="project-description">
-                Built an economic analysis tool with global data processing, 
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="project-card">
+              <div class="project-icon">📊</div>
+              <h3 class="project-title">Global Economy Indicator</h3>
+              <p class="project-tech">Data Analysis & Visualization</p>
+              <p class="project-description">
+                Built an economic analysis tool with global data processing,
                 trend prediction, interactive visuals, and real-time stats.
-            </p>
-            <div class="tech-tags">
+              </p>
+              <div class="tech-tags">
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Pandas</span>
                 <span class="tech-tag">Matplotlib</span>
-                <span class="tech-tag">NumPy</span>
+                <span class="tech-tag">NumP</span>
+              </div>
             </div>
           </div>
-          <div class="project-card">
-            <div class="project-icon">🍭</div>
-            <h3 class="project-title">Candy Crush Game</h3>
-            <p class="project-tech">Game Development</p>
-            <p class="project-description">
-                Developed a C++ Candy Crush game with 8x8/10x10 boards, match-3 
-                (rows, columns, diagonals, L-shapes), 60s timer, 15 moves, scoring 
-                system, cascading candies, and top-3 score tracking.
-            </p>
-            <div class="tech-tags">
-                <span class="tech-tag">C++</span>
-                <span class="tech-tag">Game Logic</span>
-                <span class="tech-tag">Algorithms</span>
-                <span class="tech-tag">Graphics</span>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-icon">📱</div>
-            <h3 class="project-title">Contact Book</h3>
-            <p class="project-tech">Object-Oriented Programming</p>
-            <p class="project-description">
-               Designed a contact management system using OOP 
-               (encapsulation, inheritance, polymorphism) with 
-               categorization, search, and data persistence features.
-            </p>
-            <div class="tech-tags">
-                <span class="tech-tag">OOP</span>
-                <span class="tech-tag">Encapsulation</span>
-                <span class="tech-tag">Inheritance</span>
-                <span class="tech-tag">Polymorphism</span>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-icon">💻</div>
-            <h3 class="project-title">Mini Operating System</h3>
-            <p class="project-tech">Systems Programming</p>
-            <p class="project-description">
-                Built Falcon OS in C++ — a simulator managing 15 tasks 
-                using priority scheduling, RAM tracking, IPC (pipes), 
-                thread sync, shared memory, and basic file handling.
-            </p>
-            <div class="tech-tags">
-                <span class="tech-tag">C++</span>
-                <span class="tech-tag">Threads</span>
-                <span class="tech-tag">Pipes</span>
-                <span class="tech-tag">Shared Memory</span>
-            </div>
-          </div>
+        </div>
       </div>
-  </section>
-<!-- JS code to remove navbar and show the menu on phone-->
-<script>
-  function toggleMenu() {
-    const links = document.querySelector('.nav-links');
-    links.classList.toggle('active');
-  }
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    const links = document.querySelector('.nav-links');
-    links.classList.remove('active');
-  });
-});
-</script>
-
-
+    </section>
   </body>
-  </html>
+</html>
