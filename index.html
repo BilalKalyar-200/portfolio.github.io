@@ -14,10 +14,16 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
       rel="stylesheet"
     />
+    <!-- AOS CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Navigation -->
+    <!--============================== Navigation ==============================-->
     <nav class="navbar navbar-expand-lg custom-navbar">
       <div class="container">
         <a class="navbar-brand" href="#home">Bilal Mohsin</a>
@@ -51,34 +57,31 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- ==============================Hero Section ==============================-->
     <section id="home" class="hero-section">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-            <div class="hero-image mx-auto">
+            <div class="hero-image mx-auto" data-aos="zoom-in">
               <img src="img.png" alt="Bilal Mohsin" class="img-fluid" />
             </div>
           </div>
           <div class="col-lg-8 col-md-6">
-            <div class="hero-text">
+            <div class="hero-text" data-aos="fade-left">
               <h2 class="hero-subtitle">Hello, I am</h2>
               <h1 class="hero-title">Bilal Mohsin</h1>
               <h3 class="mb-3">Computer Science Student</h3>
-              <p class="hero-description">
-                Enthusiastic and driven Computer Science student with a solid
-                foundation in both technical and creative skills. Passionate
-                about leveraging technology to solve problems and create
-                innovative solutions. Adept at working in collaborative
-                environments and continuously eager to learn and grow.
+              <p class="hero-description typewriter-text">
+                <span id="typewriter"></span>
               </p>
+
               <div class="d-flex flex-wrap gap-3 mb-3">
                 <a href="#projects">
                   <button class="btn btn-primary-custom">View My Work</button>
                 </a>
                 <button class="btn btn-outline-custom">Contact Me</button>
               </div>
-              <div class="social-icons d-flex d-md-none">
+              <div class="social-icons d-flex">
                 <a
                   href="https://www.linkedin.com/in/bilal-mohsin-830350320/"
                   target="_blank"
@@ -100,13 +103,13 @@
       </div>
     </section>
 
-    <!-- About Section -->
+    <!--============================== About Section ==============================-->
     <section id="about" class="about-section">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title" data-aos="fade-up">About Me</h2>
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <div class="about-card">
+            <div class="about-card" data-aos="zoom-in-up">
               <div class="text-center mb-4">
                 <p class="lead">
                   I'm
@@ -120,11 +123,15 @@
                 </p>
               </div>
 
-              <h3 class="text-center mb-4" style="color: var(--primary-color)">
+              <h3
+                class="text-center mb-4"
+                style="color: var(--primary-color)"
+                data-aos="fade-up"
+              >
                 My Skills & Expertise
               </h3>
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-right">
                   <div class="skill-category">
                     <h4>Languages</h4>
                     <div class="skill-item">C++</div>
@@ -134,7 +141,7 @@
                     <div class="skill-item">Assembly</div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-up">
                   <div class="skill-category">
                     <h4>Tools & Frameworks</h4>
                     <div class="skill-item">VS Code</div>
@@ -143,7 +150,7 @@
                     <div class="skill-item">Git</div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-left">
                   <div class="skill-category">
                     <h4>Soft Skills</h4>
                     <div class="skill-item">Communication</div>
@@ -159,16 +166,21 @@
       </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ==============================Skills Section ==============================-->
     <section id="skills" class="skills-section">
       <div class="container">
-        <h2 class="section-title">Tools in Action</h2>
-        <p class="text-center mb-5" style="color: #ccc">
+        <h2 class="section-title" data-aos="fade-up">Tools in Action</h2>
+        <p
+          class="text-center mb-5"
+          style="color: #ccc"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           Showcasing my programming skills through real-world projects and
           applications
         </p>
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-right">
             <div class="skill-card">
               <div class="skill-header">
                 <span class="skill-name">C++</span>
@@ -188,7 +200,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-left">
             <div class="skill-card">
               <div class="skill-header">
                 <span class="skill-name">Assembly</span>
@@ -208,7 +220,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-right">
             <div class="skill-card">
               <div class="skill-header">
                 <span class="skill-name">HTML/CSS</span>
@@ -228,7 +240,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-left">
             <div class="skill-card">
               <div class="skill-header">
                 <span class="skill-name">JavaScript</span>
@@ -248,7 +260,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-right">
             <div class="skill-card">
               <div class="skill-header">
                 <span class="skill-name">Python</span>
@@ -268,7 +280,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6" data-aos="fade-left">
             <div class="skill-card">
               <div class="skill-header">
                 <span class="skill-name">SQL</span>
@@ -288,20 +300,45 @@
               </div>
             </div>
           </div>
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="skill-card">
+              <div class="skill-header">
+                <span class="skill-name">React</span>
+                <span class="skill-percentage">40%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" style="width: 40%"></div>
+              </div>
+              <div class="skill-description">
+                <strong style="color: var(--primary-color)"
+                  >Key Projects:</strong
+                >
+                Built component-based UIs using React, managed state with hooks
+                and props, and implemented basic routing. Used JSX, functional
+                components, and reusable layouts to streamline front-end
+                development in personal projects.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ==============================Projects Section============================== -->
     <section id="projects" class="projects-section">
       <div class="container">
-        <h2 class="section-title">Built with Code</h2>
-        <p class="text-center mb-5" style="color: #ccc">
+        <h2 class="section-title" data-aos="fade-up">Built with Code</h2>
+        <p
+          class="text-center mb-5"
+          style="color: #ccc"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           Showcasing my expertise through hands-on projects and real-world
           applications
         </p>
         <div class="row">
-          <div class="col-lg-4 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
             <div class="project-card">
               <div class="project-icon">🎮</div>
               <h3 class="project-title">Game Store</h3>
@@ -319,7 +356,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
             <div class="project-card">
               <div class="project-icon">🏓</div>
               <h3 class="project-title">Ping Pong Game</h3>
@@ -335,7 +372,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
             <div class="project-card">
               <div class="project-icon">📸</div>
               <h3 class="project-title">Mini Instagram App</h3>
@@ -353,7 +390,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
             <div class="project-card">
               <div class="project-icon">📊</div>
               <h3 class="project-title">Global Economy Indicator</h3>
@@ -366,12 +403,184 @@
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Pandas</span>
                 <span class="tech-tag">Matplotlib</span>
-                <span class="tech-tag">NumP</span>
+                <span class="tech-tag">NumPy</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+            <div class="project-card">
+              <div class="project-icon">🍭</div>
+              <h3 class="project-title">Candy Crush Game</h3>
+              <p class="project-tech">Game Development</p>
+              <p class="project-description">
+                Developed a C++ Candy Crush game with 8x8/10x10 boards, match-3
+                (rows, columns, diagonals, L-shapes), 60s timer, 15 moves,
+                scoring system, cascading candies, and top-3 score tracking.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">OOP</span>
+                <span class="tech-tag">Game Logic</span>
+                <span class="tech-tag">Graphics</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+            <div class="project-card">
+              <div class="project-icon">📱</div>
+              <h3 class="project-title">Contact Book</h3>
+              <p class="project-tech">Object-Oriented Programming</p>
+              <p class="project-description">
+                Designed a contact management system using OOP (encapsulation,
+                inheritance, polymorphism) with categorization, search, and data
+                persistence features.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Encapsulation</span>
+                <span class="tech-tag">Inheritance</span>
+                <span class="tech-tag">Polymorphism</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+            <div class="project-card">
+              <div class="project-icon">💻</div>
+              <h3 class="project-title">Mini Operating System</h3>
+              <p class="project-tech">Systems Programming</p>
+              <p class="project-description">
+                Built Falcon OS in C++, a simulator managing 15 tasks using
+                priority scheduling, RAM tracking, IPC (pipes), thread
+                synchronization, shared memory, and basic file handling.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Threads</span>
+                <span class="tech-tag">IPC</span>
+                <span class="tech-tag">File I/O</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <!-- =====================================\Contact section===================================== -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <h2 class="section-title">Let's Connect</h2>
+        <!-- Contact Form -->
+        <div class="row mt-5">
+          <div class="col-lg-8 mx-auto">
+            <div class="contact-form">
+              <h3 class="text-center mb-4" style="color: var(--primary-color)">
+                Send Me a Message
+              </h3>
+              <form id="contactForm">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="name" class="form-label">Your Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      placeholder="Enter your name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      placeholder="Enter your phone"
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    <select class="form-select" id="subject" required>
+                      <option value="">Select a subject</option>
+                      <option value="project">Project Collaboration</option>
+                      <option value="job">Job Opportunity</option>
+                      <option value="freelance">Freelance Work</option>
+                      <option value="general">General Inquiry</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Your Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="5"
+                    placeholder="Tell me about your project or inquiry..."
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-send">
+                  <i class="bi bi-send-fill me-2"></i>Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- =====================================Social Links =====================================-->
+        <div class="social-links">
+          <a
+            href="https://www.linkedin.com/in/bilal-mohsin-830350320/"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/BilalKalyar-200"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="mailto:mohsinkalyarpk@gmail.com" class="social-link">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+          <a
+            href="https://wa.me/923337049740"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a href="tel:923337049740" class="social-link">
+            <i class="bi bi-telephone-fill"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/bilal_kalyar_/"
+            target="_blank"
+            class="social-link"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS for smooth scrolling animations hehe -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <script src="java.js"></script>
   </body>
 </html>

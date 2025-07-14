@@ -23,7 +23,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom Navbar */
+/* /============================navbar============================== */
 .custom-navbar {
   background-color: var(--darker-bg) !important;
   padding: 1rem 0;
@@ -79,7 +79,7 @@ html {
   box-shadow: none;
 }
 
-/* Hero Section */
+/* ===============================Hero Section=============================== */
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -155,8 +155,39 @@ html {
     opacity: 1;
   }
 }
+.typewriter-text {
+  font-size: 1.3rem;
+  min-height: 40px;
+  font-weight: bold;
+  margin-top: 15px;
+}
 
-/* Custom Buttons */
+.typewriter-line {
+  background: linear-gradient(90deg, #42a5f5, #a137ce);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+  color: #7d4b92;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+/* ===============================Buttons=============================== */
 .btn-primary-custom {
   background: linear-gradient(
     135deg,
@@ -175,7 +206,8 @@ html {
 
 .btn-primary-custom:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(81, 162, 255, 0.4);
+  box-shadow: 0 6px 20px rgba(77, 57, 48, 0.4);
+  color: #fff;
 }
 
 .btn-outline-custom {
@@ -196,18 +228,17 @@ html {
   transform: translateY(-3px);
 }
 
-/* About Section */
+/* ===============================About Section=============================== */
 .about-section {
-  /* padding: 100px 0; */
   background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
   position: relative;
 }
 
 .about-card {
   background: rgba(255, 255, 255, 0.05);
-  border: 2px solid rgba(81, 162, 255, 0.2);
+  border: 3px solid rgba(81, 162, 255, 0.2);
   border-radius: 20px;
-  padding: 3rem;
+  padding: 2.5rem;
   backdrop-filter: blur(15px);
   transition: all 0.3s ease;
   position: relative;
@@ -281,9 +312,8 @@ html {
   transform: translateX(5px);
 }
 
-/* Skills Section */
+/* ===============================Skills section=============================== */
 .skills-section {
-  /* padding: 100px 0; */
   background: var(--gradient-bg);
 }
 
@@ -359,7 +389,7 @@ html {
   line-height: 1.6;
 }
 
-/* Projects Section */
+/* ===============================Projects section=============================== */
 .projects-section {
   /* padding: 100px 0; */
   background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
@@ -438,7 +468,7 @@ html {
   font-weight: 500;
 }
 
-/* Social Icons */
+/* ===============================Social icons=============================== */
 .social-icons {
   display: flex;
   gap: 1rem;
@@ -466,7 +496,147 @@ html {
   transform: scale(1.1);
 }
 
-/* Responsive adjustments */
+section {
+  scroll-margin-top: 80px;
+}
+[data-aos] {
+  transition-property: transform, opacity !important;
+  will-change: transform, opacity;
+}
+
+.contact-section {
+  /* padding: 100px; */
+  background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
+  /* min-height: 100vh; */
+  position: relative;
+}
+
+.section-title {
+  font-size: 3rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  text-shadow: 0 0 20px rgba(81, 162, 255, 0.3);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--primary-color),
+    transparent
+  );
+  border-radius: 2px;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(81, 162, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-top: -20px;
+  backdrop-filter: blur(15px);
+  transition: all 0.3s ease;
+}
+
+.contact-form:hover {
+  border-color: rgba(81, 162, 255, 0.4);
+  box-shadow: 0 20px 40px rgba(81, 162, 255, 0.1);
+}
+
+.form-label {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(81, 162, 255, 0.3);
+  border-radius: 10px;
+  color: #fff;
+  padding: 12px 15px;
+  transition: all 0.3s ease;
+  appearance: none; /* removes native OS dropdown arrow */
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(81, 162, 255, 0.25);
+  color: #fff;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+.form-select option {
+  background-color: #2b2b2b;
+  color: #fff;
+}
+
+.btn-send {
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border: none;
+  border-radius: 25px;
+  padding: 15px 40px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(81, 162, 255, 0.3);
+  width: 100%;
+}
+
+.btn-send:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(81, 162, 255, 0.4);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.social-link {
+  width: 60px;
+  height: 60px;
+  background: rgba(81, 162, 255, 0.1);
+  border: 2px solid rgba(81, 162, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.social-link:hover {
+  background: var(--primary-color);
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(81, 16/2, 255, 0.4);
+}
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
@@ -487,6 +657,19 @@ html {
 
   .about-card {
     padding: 2rem;
+  }
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .social-links {
+    gap: 1rem;
+  }
+
+  .social-link {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
   }
 }
 
@@ -519,9 +702,7 @@ html {
   .project-card {
     padding: 1.5rem;
   }
-}
-
-/* Scroll offset for fixed navbar */
-section {
-  scroll-margin-top: 80px;
+  .section-title {
+    font-size: 2rem;
+  }
 }
