@@ -22,7 +22,10 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
+html,
+body {
+  overflow-x: hidden;
+}
 /* /============================navbar============================== */
 .custom-navbar {
   background-color: var(--darker-bg) !important;

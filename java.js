@@ -1,10 +1,20 @@
-// AOS Initialization
+//remove that dropdown after use
+document
+  .querySelectorAll(".navbar-collapse .nav-link")
+  .forEach(function (link) {
+    link.addEventListener("click", function () {
+      const navbar = document.querySelector(".navbar-collapse");
+      if (navbar.classList.contains("show")) {
+        new bootstrap.Collapse(navbar).hide();
+      }
+    });
+  });
+//AOS Initialization
 AOS.init({
   duration: 1500,
-  once: true, // Animate only once when scrolling down
+  once: true, //animate when scrolling
 });
-
-// Typewriter Animation
+//typewrite at home page
 const phrases = [
   "Turning ideas into code...",
   "Building what matters, line by line...",
@@ -12,8 +22,8 @@ const phrases = [
   "Learning, coding, and growing...",
 ];
 
-let i = 0; // Index of current phrase
-let j = 0; // Index within the current phrase
+let i = 0;
+let j = 0;
 let isDeleting = false;
 let currentText = "";
 let typewriter = null;
