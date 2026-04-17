@@ -550,6 +550,7 @@ section {
   margin-top: -20px;
   backdrop-filter: blur(15px);
   transition: all 0.3s ease;
+  margin-top: -30px;
 }
 
 .contact-form:hover {
@@ -633,12 +634,13 @@ section {
   text-decoration: none;
   transition: all 0.3s ease;
   font-size: 1.5rem;
+  margin-top: -40px;
 }
 
 .social-link:hover {
   background: var(--primary-color);
   color: #fff;
-  transform: scale(1.1);
+  transform: scale(1);
   box-shadow: 0 10px 30px rgba(81, 16/2, 255, 0.4);
 }
 
