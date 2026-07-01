@@ -50,6 +50,9 @@
               <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#achievements">Achievements</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
@@ -121,7 +124,10 @@
                   meaningful and impactful digital experiences. I thrive in
                   collaborative environments and continuously seek opportunities
                   to learn, solve real-world problems, and bring creative ideas
-                  to life through technology.
+                  to life through technology. My projects range from AI-powered
+                  hackathon agents to full-stack MERN applications and low-level
+                  systems programming, reflecting a hands-on approach to
+                  learning across the entire tech stack.
                 </p>
               </div>
 
@@ -148,8 +154,9 @@
                     <h4>Tools & Frameworks</h4>
                     <div class="skill-item">VS Code</div>
                     <div class="skill-item">SQL</div>
-                    <div class="skill-item">Bootstrap</div>
-                    <div class="skill-item">Git</div>
+                    <div class="skill-item">MongoDB</div>
+                    <div class="skill-item">Node.js / Express</div>
+                    <div class="skill-item">React</div>
                   </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-left">
@@ -181,7 +188,7 @@
           Showcasing my programming skills through real-world projects and
           applications
         </p>
-        <div class="row">
+        <div class="row gy-4">
           <div class="col-lg-6" data-aos="fade-right">
             <div class="skill-card">
               <div class="skill-header">
@@ -322,6 +329,46 @@
               </div>
             </div>
           </div>
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="skill-card">
+              <div class="skill-header">
+                <span class="skill-name">MongoDB</span>
+                <span class="skill-percentage">65%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" style="width: 65%"></div>
+              </div>
+              <div class="skill-description">
+                <strong style="color: var(--primary-color)"
+                  >Key Projects:</strong
+                >
+                Designed schemas and data flows for HireFlow AI's candidate/job
+                records and Smiley's patient, appointment, and habit-log
+                collections, using Mongoose for validation and relationships.
+                Implemented efficient data storage and retrieval solutions for
+                real-world applications.
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <div class="skill-card">
+              <div class="skill-header">
+                <span class="skill-name">Node.js / Express</span>
+                <span class="skill-percentage">55%</span>
+              </div>
+              <div class="skill-progress">
+                <div class="skill-progress-bar" style="width: 55%"></div>
+              </div>
+              <div class="skill-description">
+                <strong style="color: var(--primary-color)"
+                  >Key Projects:</strong
+                >
+                Built the REST API, JWT authentication, and file-upload backend
+                powering Smiley, handling patients, dentists, and appointment
+                scheduling.
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -340,6 +387,70 @@
           applications
         </p>
         <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+            <div
+              class="project-card"
+              ondblclick="
+                window.open(
+                  'https://github.com/BilalKalyar-200/hireflow-ai',
+                  '_blank',
+                )
+              "
+              title="Double-click to view GitHub repo"
+            >
+              <div class="project-icon">⚡</div>
+              <h3 class="project-title">HireFlow AI</h3>
+              <p class="project-tech">
+                Autonomous AI Agent · Global AI Hackathon by Qwen Cloud
+              </p>
+              <p class="project-description">
+                An autonomous recruitment agent that parses job descriptions,
+                screens resumes, scores candidates using Qwen reasoning +
+                semantic matching, auto-shortlists or rejects, and schedules
+                interviews - with human review for borderline cases and a full
+                audit trail.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">FastAPI</span>
+                <span class="tech-tag">Qwen AI</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">React</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
+            <div
+              class="project-card"
+              ondblclick="
+                window.open(
+                  'https://github.com/BilalKalyar-200/smiley-dental-tracker',
+                  '_blank',
+                )
+              "
+              title="Double-click to view GitHub repo"
+            >
+              <div class="project-icon">🦷</div>
+              <h3 class="project-title">Smiley</h3>
+              <p class="project-tech">
+                Full-Stack MERN · Dental Health Tracker
+              </p>
+              <p class="project-description">
+                A digital dental health tracker connecting patients and dentists
+                - supporting image uploads, symptom reporting, habit logging
+                with health scores, appointment booking, and dentist diagnosis
+                notes.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">JWT</span>
+                <span class="tech-tag">Tailwind</span>
+              </div>
+            </div>
+          </div>
           <div class="col-lg-4 col-md-6 mb-4" data-aos="zoom-in">
             <div
               class="project-card"
@@ -582,9 +693,167 @@
         </div>
       </div>
     </section>
+    <!--============================== Achievements Section ==============================-->
+    <section id="achievements" class="achievements-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">
+          Achievements & Recognition
+        </h2>
+        <p
+          class="text-center mb-5"
+          style="color: #ccc"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Milestones that reflect my growth as a competitive programmer,
+          innovator, and educator
+        </p>
+        <div class="row gy-4">
+          <!-- ICPC Regional Champion -->
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-right">
+            <div class="achievement-card">
+              <div class="achievement-header">
+                <div class="achievement-icon">🏆</div>
+                <div>
+                  <h3 class="achievement-title">
+                    ICPC Asia-Topi Regional Champion
+                  </h3>
+                  <p class="achievement-org">
+                    International Collegiate Programming Contest
+                  </p>
+                </div>
+              </div>
+              <p class="achievement-date">
+                <i class="bi bi-calendar3 me-2"></i>31 Jan &ndash; 1 Feb 2026
+              </p>
+              <p class="achievement-description">
+                Represented NU-CFC at the 2025 ICPC Asia Topi Regional On-site
+                Contest, solving complex algorithmic problems under strict time
+                pressure and earning recognition as a Regional Champion for
+                outstanding performance in competitive programming.
+              </p>
+              <div class="tech-tags mb-3">
+                <span class="tech-tag">Competitive Programming</span>
+                <span class="tech-tag">Algorithms</span>
+                <span class="tech-tag">Data Structures</span>
+              </div>
+              <a
+                href="certificates/icpc-regional-champion.pdf"
+                target="_blank"
+                class="achievement-link"
+              >
+                <i class="bi bi-file-earmark-pdf-fill me-2"></i>View Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- NASA Space Apps Challenge -->
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-left">
+            <div class="achievement-card">
+              <div class="achievement-header">
+                <div class="achievement-icon">🚀</div>
+                <div>
+                  <h3 class="achievement-title">
+                    NASA Space Apps &ndash; Galactic Problem Solver
+                  </h3>
+                  <p class="achievement-org">
+                    NASA International Space Apps Challenge
+                  </p>
+                </div>
+              </div>
+              <p class="achievement-date">
+                <i class="bi bi-calendar3 me-2"></i>October 4&ndash;5, 2025
+              </p>
+              <p class="achievement-description">
+                Took part in the world's largest global hackathon, working with
+                a team to design a solution addressing real challenges faced on
+                Earth and in space, earning the "Galactic Problem Solver"
+                certificate for outstanding participation and creative
+                problem-solving.
+              </p>
+              <div class="tech-tags mb-3">
+                <span class="tech-tag">Hackathon</span>
+                <span class="tech-tag">Innovation</span>
+                <span class="tech-tag">Teamwork</span>
+              </div>
+              <a
+                href="certificates/nasa-space-apps-challenge.pdf"
+                target="_blank"
+                class="achievement-link"
+              >
+                <i class="bi bi-file-earmark-pdf-fill me-2"></i>View Certificate
+              </a>
+            </div>
+          </div>
+          <!-- Dean's List -->
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-left">
+            <div class="achievement-card">
+              <div class="achievement-header">
+                <div class="achievement-icon">⭐</div>
+                <div>
+                  <h3 class="achievement-title">Dean's List</h3>
+                  <p class="achievement-org">
+                    FAST NUCES, Chiniot&ndash;Faisalabad Campus
+                  </p>
+                </div>
+              </div>
+              <p class="achievement-date">
+                <i class="bi bi-calendar3 me-2"></i>Fall 2024
+              </p>
+              <p class="achievement-description">
+                Recognized on the Dean's List for achieving a semester GPA above
+                3.5, reflecting consistent academic excellence and strong
+                dedication to coursework.
+              </p>
+              <div class="tech-tags mb-3">
+                <span class="tech-tag">Academic Excellence</span>
+                <span class="tech-tag">GPA 3.5+</span>
+              </div>
+              <a
+                href="certificates/deans-list-fall-2024.pdf"
+                target="_blank"
+                class="achievement-link"
+                ><i class="bi bi-file-earmark-pdf-fill me-2"></i>View
+                Certificate</a
+              >
+            </div>
+          </div>
+          <!-- Teaching Assistant -->
+          <div class="col-lg-6 col-md-6 mb-4" data-aos="fade-right">
+            <div class="achievement-card">
+              <div class="achievement-header">
+                <div class="achievement-icon">🎓</div>
+                <div>
+                  <h3 class="achievement-title">
+                    Teaching Assistant &ndash; Object-Oriented Programming
+                  </h3>
+                  <p class="achievement-org">
+                    FAST NUCES, Chiniot&ndash;Faisalabad Campus
+                  </p>
+                </div>
+              </div>
+              <p class="achievement-date">
+                <i class="bi bi-calendar3 me-2"></i>January 2026 &ndash; Present
+              </p>
+              <p class="achievement-description">
+                Leading weekly lab sessions on OOP concepts in C++ for 50+
+                students, delivering structured feedback on graded assignments
+                to improve completion rates and strengthen students' hands-on
+                programming skills.
+              </p>
+              <div class="tech-tags">
+                <span class="tech-tag">Teaching</span>
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Mentorship</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="contact" class="contact-section">
       <div class="container">
-        <h2 class="section-title">Let's Connect</h2>
+        <h2 class="section-title" data-aos="fade-up">Let's Connect</h2>
 
         <!-- Contact Form -->
         <div class="row mt-5">
@@ -682,7 +951,7 @@
         </div>
 
         <!-- Social Links -->
-        <div class="social-links">
+        <div class="social-links" data-aos="fade-up" data-aos-delay="100">
           <a
             href="https://www.linkedin.com/in/bilal-mohsin-830350320/"
             target="_blank"

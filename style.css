@@ -5,7 +5,18 @@
   --darker-bg: #000;
   --gradient-bg: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
 }
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
 
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge (Chromium) */
+}
+
+body {
+  overflow-x: hidden;
+}
 * {
   margin: 0;
   padding: 0;
@@ -331,6 +342,9 @@ body {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .skill-card:hover {
@@ -472,7 +486,148 @@ body {
   font-size: 0.8rem;
   font-weight: 500;
 }
+/* ===============================Achievements section=============================== */
+.achievements-section {
+  padding: 0px 0;
+  background: var(--gradient-bg);
+}
 
+.achievement-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(81, 162, 255, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.achievement-card:hover::before {
+  transform: scaleX(1);
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-color);
+  box-shadow: 0 20px 40px rgba(81, 162, 255, 0.2);
+}
+
+.achievement-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.achievement-icon {
+  flex-shrink: 0;
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.achievement-title {
+  font-size: 1.15rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.achievement-org {
+  color: #999;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.achievement-date {
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.achievement-description {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.achievement-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.6rem 1.3rem;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.achievement-link:hover {
+  background: var(--primary-color);
+  color: #000;
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .achievement-card {
+    padding: 1.5rem;
+  }
+  .achievement-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .achievement-card {
+    padding: 1.5rem;
+  }
+  .achievement-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
 /* ===============================Social icons=============================== */
 .social-icons {
   display: flex;
@@ -510,9 +665,8 @@ section {
 }
 
 .contact-section {
-  /* padding: 100px; */
+  padding: 0px 0 80px;
   background: linear-gradient(145deg, #111 0%, #1a1a1a 100%);
-  /* min-height: 100vh; */
   position: relative;
 }
 
@@ -619,6 +773,7 @@ section {
   justify-content: center;
   gap: 1.5rem;
   margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .social-link {
@@ -634,7 +789,7 @@ section {
   text-decoration: none;
   transition: all 0.3s ease;
   font-size: 1.5rem;
-  margin-top: -40px;
+  /*margin-top: -40px;*/
 }
 
 .social-link:hover {
